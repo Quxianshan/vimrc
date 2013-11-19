@@ -82,7 +82,9 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>nn :NERDTreeToggle<cr>
+"map <leader>nn :NERDTreeToggle<cr>
+nnoremap<c-t> :exe 'NERDTreeToggle'<CR>
+let NERDTreeWinPos="right" "将nerdTree显示在vim右边
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
 
@@ -105,3 +107,8 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " => vim-airline config (force color)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme="luna"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Taglist.vim config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <s-t> : Tlist<CR>
